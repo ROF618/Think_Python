@@ -1,13 +1,15 @@
 fin = open('word.txt')
 
-def avoids(words, omit_this):
-    omit_this = []
-    all_words = []
-    for word in words:
-        seperate_word = word.strip()
-        all_words.append(seperate_word)
-    for word in all_words:
-        if word == omit_this:
-            print(word)
+def avoids(word, forbiden_letters):
 
-avoids(fin, a)
+    forbiden_letters = forbiden_letters.replace(',', '')
+    for letter in word:
+        for char in forbiden_letters:
+            if char == letter:
+                return print('does not work')
+            else:
+                continue
+    print('this does work')
+
+
+avoids("test", "e,a,b,c,d,")
