@@ -13,9 +13,9 @@ def uses_only(word, required_letters):
         required_letters_list.append(char)
 
     #the if statement is not correct it needs to be tweaked so that if there are repeating letters the function will still return true as long as those letters are present at least once in the word
-    if broken_down_word == required_letters_list:
+    if set(broken_down_word) == set(required_letters_list):
         return print('it works')
-    print(broken_down_word)
-    print(required_letters_list)
+    else:
+        return print('it does not work')
 
-uses_only('door', 'd,o,r')
+uses_only('door', 'd,o,r,e')
