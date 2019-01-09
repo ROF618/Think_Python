@@ -3,8 +3,11 @@
 def uses_all(word, required_letters):
     letters_in_word = []
     required_letters_list = []
+    final_list = 0
     required_letters = required_letters.replace(',', '')
-    final_list = []
+    required_letters = required_letters.replace(' ', '')
+    required_letters = set(required_letters)
+    print(required_letters)
     for char in word:
         letters_in_word.append(char)
 
@@ -14,13 +17,12 @@ def uses_all(word, required_letters):
         required_letters_list.append(letters)
     #the answer to this will be found in https://www.programiz.com/python-programming/methods/built-in/filter
     ## filter first and then use that mutated list to check against the required letters
-    for required_letters_list in letters_in_word:
-        if required_letters_list == letters_in_word:
-            final_list.append(required_letters_list)
-    if letters_in_word == final_list:
-        return print("it works")
+
+
+    if set(letters_in_word) == required_letters_list:
+        return print(len(letters_in_word))
     else:
-        return print("it doesn't work")
+        return print(letters_in_word, required_letters_list, final_list)
 
 
 
