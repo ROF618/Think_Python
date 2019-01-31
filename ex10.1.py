@@ -1,10 +1,15 @@
 def nested_sum(ints):
-    #int_nested = []
+    int_nested = []
+    total = 0
     for num in ints:
         if num != int:
-            for x in list(num):
-                print(x)
-        print(num)
+            for x in num:
+                return x
+        int_nested.extend(num)
+
+    for single_int in int_nested:
+        total += single_int
+    print(total)
 
 
 

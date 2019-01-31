@@ -1,11 +1,8 @@
-def is_sorted(lineup):
-    sorted_lineup = sorted(lineup)
-
-    if lineup == sorted_lineup:
-        return print("true")
+def is_anagram(str1, str2):
+    if set(str1) == set(str2):
+        print("true")
     else:
-        return print("false")
+        print("false")
 
-test = [2, 3, 5, 1, 4, 9, 7]
-test1 = [1, 2, 3, 4]
-is_sorted(test1)
+
+is_anagram("arc", "car")
