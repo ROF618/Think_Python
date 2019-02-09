@@ -5,4 +5,4 @@ def is_anagram(str1, str2):
         print("false")
 
 
-is_anagram("arc", "car")
+is_anagram("arc", "rac")
